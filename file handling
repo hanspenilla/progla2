@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main(){
+    FILE *myFile;
+    myFile = fopen("sample.txt", "r");
+
+    int i, total=0;
+    int numberArray[5];
+	
+    for (i = 0; i < 5; i++){
+        fscanf(myFile, "%d", &numberArray[i]);
+    }
+    for (i=0; i<5; i++){
+		total = numberArray[i] + total;
+	}
+    cout<<total;
+}
